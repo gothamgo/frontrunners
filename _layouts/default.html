@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+
+    <title>DevIgnition</title>
+
+    <link rel="stylesheet" type="text/css" href="{{site.url}}/stylesheets/default.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">     
+    <!--
+    font-family: 'Open Sans', sans-serif;
+    -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Viga&family=Ysabeau+Infant:wght@200&display=swap" rel="stylesheet"> 
+    <!--
+    font-family: 'Viga', sans-serif;
+    font-family: 'Ysabeau Infant', sans-serif;
+    -->
+
+  <style>
+    * {
+      margin: 0; 
+      padding: 0; 
+      box-sizing: border-box;
+    }
+    body {
+      background-color: #141932;
+      color: #f7f7f7;
+      font-family: 'Ysabeau Infant', sans-serif;
+      font-size: 18px;
+    }
+    body h1 {
+      color: #37e1e1;
+      font-family: 'Open Sans', sans-serif;
+      margin: 10px 0px;
+    }
+    body h2 {
+      color: #37e1e1;
+      margin: 10px 0px;
+    }
+    body p {
+      margin: 10px 0px;
+    }
+  </style>
+    
+  </head>
+    <body>
+      {% include header.html %}
+      {{ content }}
+      {% include footer.html %}
+  </body>
+</html>
