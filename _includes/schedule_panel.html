@@ -1,94 +1,107 @@
 <style>
   div.schedule-panel-wrapper {
-    background-color: #D0ECE7;
+    background-color: aliceblue;
+    padding-bottom: 20px;
+    border: solid lightgray;
+    border-width: 1px 0px 0px 0px;
+    text-align: center;
+    color: #0062AC;
   }
   div.schedule-panel {
     margin: 0 auto;
     max-width: 1100px;
-    padding: 30px 0px;
+    padding: 10px 0px 15px 0px;
   }
-  div.schedule-date {
+  div.schedule-panel h2 {
+    color: #0062AC;
   }
-  div.schedule-entry {
+  div.schedule-panel-time-slot {
+    margin: 0 auto;
+    max-width: 1100px;
+    padding: 7px 0px;
   }
-  div.schedule-entry {
+  div.schedule-panel-room {
+    padding: 2px 0px;
   }
-  div.schedule-event-time {
+  div.schedule-panel-duration {
+    padding: 2px 0px;
+  }
+  div.schedule-panel-talk {
+    padding: 2px 0px;
   }
 </style>
 
 <div id="schedule" class="schedule-panel-wrapper">
   <div class="schedule-panel">
-    <h3>Schedule</h3>
-    <div class="schedule-date">
-      Mar 8, 2024
+    <h2>Schedule</h2>
+
+    <div class="schedule-panel-time-slot">
+      <div class="schedule-panel-duration"><strong>9:30 AM</strong></div>
+  
+      <div class="schedule-panel-room">Room 125</div>
+
+      <div class="schedule-panel-talk"><strong>Brian Childress</strong> &mdash; <em>Simplicity: The Key to Software Success</em></div>
     </div>
-    <div class="schedule-entry">
-      <div class="schedule-event-time">
-        8:30 AM - 9:30 AM
-      </div>
-      <div class="schedule-entry-title">
-        Registration and Breakfast
-      </div>
+
+    <div class="schedule-panel-time-slot">
+      <div class="schedule-panel-duration"><strong>10:30 AM</strong></div>
+  
+      <div class="schedule-panel-room">Room 125</div>
+      <div class="schedule-panel-talk"><strong>Jessica Kerr</strong> &mdash; <em>Observability for the Front End</em></div>
+
+      <div class="schedule-panel-room">Room 126</div>
+      <div class="schedule-panel-talk"><strong>Chris Lorenzo</strong> &mdash; <em>SolidJS: The Universal Renderer</em></div>
     </div>
-    <div class="schedule-entry">
-      <div class="schedule-event-time">
-        9:30 AM
-      </div>
-      <div class="schedule-entry">
-        <p class="schedule-speaker">
-          Jen Ozmen
-        </p>
-        <div class="schedule-entry-title">
-          Trusted Types: DOM XSS Protection at Scale
-        </div>        
-      </div>
+
+    <div class="schedule-panel-time-slot">
+      <div class="schedule-panel-duration"><strong>11:15 AM</strong></div>
+  
+      <div class="schedule-panel-room">Room 125</div>
+      <div class="schedule-panel-talk"><strong>Jen Ozmen and Aaron Shim</strong> &mdash; <em>Trusted Types: DOM XSS Protection at Scale</em></div>
+
+      <div class="schedule-panel-room">Room 126</div>
+      <div class="schedule-panel-talk"><strong>Tim Simms</strong> &mdash; <em>Spinning up Node.js in the Browser</em></div>
     </div>
+
+    <div class="schedule-panel-time-slot">
+      <div class="schedule-panel-duration"><strong>1:15 AM</strong></div>
+  
+      <div class="schedule-panel-room">Room 125</div>
+      <div class="schedule-panel-talk"><strong>Jacob Yacovelli and Laura King</strong> &mdash; <em>Simpler Enterprise Angular Components with Smart Directives</em></div>
+
+      <div class="schedule-panel-room">Room 126</div>
+      <div class="schedule-panel-talk"><strong>. Scott Ford</strong> &mdash; <em>Lessons Learned Migrating from Jekyll to Next.js with Help from Playwright</em></div>
+    </div>
+
+    <div class="schedule-panel-time-slot">
+      <div class="schedule-panel-duration"><strong>2:00 PM</strong></div>
+  
+      <div class="schedule-panel-room">Room 125</div>
+      <div class="schedule-panel-talk"><strong>Michael Schoonmaker</strong> &mdash; <em>We're Snaking it Live!</em></div>
+
+      <div class="schedule-panel-room">Room 126</div>
+      <div class="schedule-panel-talk"><strong>Dillon Mulroy</strong> &mdash; <em>Melange: The Next Frontier in Type-Safe Web Development</em></div>
+    </div>
+
+    <div class="schedule-panel-time-slot">
+      <div class="schedule-panel-duration"><strong>3:00 PM</strong></div>
+  
+      <div class="schedule-panel-room">Room 125</div>
+      <div class="schedule-panel-talk"><strong>Jim Becker</strong> &mdash; <em>EASILY level up your website using the ChatGPT API and NextJS</em></div>
+
+      <div class="schedule-panel-room">Room 126</div>
+      <div class="schedule-panel-talk"><strong>Nathan E. Lilly</strong> &mdash; <em>Hand-coded Artisanal Data-Visualization</em></div>
+    </div>
+
+    <div class="schedule-panel-time-slot">
+      <div class="schedule-panel-duration"><strong>3:45 PM</strong></div>
+  
+      <div class="schedule-panel-room">Room 125</div>
+      <div class="schedule-panel-talk"><strong>Shri Khalpada</strong> &mdash; <em>Where Numbers Meet Art: Building Data Visualizations In The Modern Web</em></div>
+
+      <div class="schedule-panel-room">Room 126</div>
+      <div class="schedule-panel-talk"><strong>Alec Barrett</strong> &mdash; <em>Build your own devtools</em></div>
+    </div>
+
   </div>
 </div>
-
-<!--
-CONFIRMED
-
-1st slot, morning - 9:30 AM
-Brian Childress
-PaperCall.io - Frontrunners Mar 8, 2024/Simplicity: The Key to Software Success
-
-2nd slot, morning - 10:30 AM
-Jessica Kerr
-PaperCall.io - Frontrunners Mar 8, 2024/Observability for the Front End
-Chris Lorenzo
-PaperCall.io - Frontrunners Mar 8, 2024/SolidJS: The Universal Renderer
-
-3rd slot, morning - 11:15 AM
-Tim Simms
-PaperCall.io - Frontrunners Mar 8, 2024/Spinning up Node.js in the Browser
-Jen Ozmen and Aaron Shim
-PaperCall.io - Frontrunners Mar 8, 2024/Trusted Types: DOM XSS Protection at Scale
-
-1st slot, afternoon - 1:15 PM
-Jacob Yacovelli and Laura King
-PaperCall.io - Frontrunners Mar 8, 2024/Simpler Enterprise Angular Components with Smart Directives
-Michael Schoonmaker
-PaperCall.io - Frontrunners Mar 8, 2024/We're Snaking it Live!
-
-2nd slot, afternoon - 2:00 PM
-Nathan E. Lilly
-PaperCall.io - Frontrunners Mar 8, 2024/Hand-coded Artisanal Data-Visualization
-M. Scott Ford (resend)
-PaperCall.io - Frontrunners Mar 8, 2024/Lessons Learned Migrating a Static Website from Jekyll to Next.js with Help From Playwright
-
-3rd slot, afternoon - 3: 00 PM
-Alec Barrett
-PaperCall.io - Frontrunners Mar 8, 2024/Build your own devtools
-Jim Becker
-PaperCall.io - Frontrunners Mar 8, 2024/EASILY level up your website using the ChatGPT API and NextJS
-
-4th afternoon - 3:45 PM
-Shri Khalpada
-PaperCall.io - Frontrunners Mar 8, 2024/Visualize To Empower: Building Interactive Data Visualizations In The Modern Web
-Dillon Mulroy
-PaperCall.io - Frontrunners Mar 8, 2024/Melange: The Next Frontier in Type-Safe Web Development
-Dillon wants 40 minutes, not 30
-
--->
