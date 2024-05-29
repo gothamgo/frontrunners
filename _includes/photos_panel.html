@@ -1,32 +1,31 @@
 <style>
-  div.pitch-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+  div.headshots-wrapper {
+    background-color: #D0ECE7;
   }
-  div.pitch {
-    padding: 10px 20px 10px;
-    max-width: 800px;
-  }
-  div.pitch p {
-    padding: 5px;
-    font-family: "old-claude-lp-regular", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 20px;
-    color: white;
-  }
-  img.pitch-image {
-    width: 180px;
+  
+  div.img-column {
     float: left;
-    padding: 30px 20px 5px 0px;
+    width: 33.33%;
+    padding: 5px;
+  }
+
+  div.img-row::after {
+    content: "";
+    clear: both;
+    display: table;
   }
   
 </style>
-
-<div class="pitch-wrapper">
-  <div class="pitch">
-    <img class="pitch-image" src="{{site.url}}/images/NHGroupPic.png" alt=""/>
-  </div>
-</div>
+    <div class="img-row">
+      <div class="img-column">
+        <img src="{{site.url}}/images/frphoto01.png" alt="Frontrunners Conference Photo 01" style="width: 100%">
+      </div>
+      <div class="img-column">
+        <img src="{{site.url}}/images/frphoto02.png" alt="Frontrunners Conference Photo 02" style="width: 100%">
+      </div>
+      <div class="img-column">
+        <img src="{{site.url}}/images/frphoto03.png" alt="Frontrunners Conference Photo 03" style="width: 100%>
+      </div>
+    </div>
 
