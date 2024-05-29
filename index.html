@@ -21,6 +21,17 @@ layout: default
     margin-right: auto;
     width: 50%;
   }
+  .img-column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+  }
+
+  .img-row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
 </style>
 
 <div class="content-wrapper">
@@ -107,10 +118,17 @@ layout: default
       <a href="https://www.youtube.com/watch?v=E9CCb3bxA8E&list=PLeGxIOPLk9EKm9m_tCONpLqfRRRBlWXKG" target="_blank">2024 Videos</a>.
     </p>
 
-    <img src="{{site.url}}/images/frphoto01.png" alt="Frontrunners Conference Photo 01">
-    <img src="{{site.url}}/images/frphoto02.png" alt="Frontrunners Conference Photo 02">
-    <img src="{{site.url}}/images/frphoto03.png" alt="Frontrunners Conference Photo 03">
-
+    <div class="img-row">
+      <div class="img-column">
+        <img src="{{site.url}}/images/frphoto01.png" alt="Frontrunners Conference Photo 01">
+      </div>
+      <div class="img-column">
+        <img src="{{site.url}}/images/frphoto02.png" alt="Frontrunners Conference Photo 02">
+      </div>
+      <div class="img-column">
+        <img src="{{site.url}}/images/frphoto03.png" alt="Frontrunners Conference Photo 03">
+      </div>
+    </div>
   </div>
 </div>
 
