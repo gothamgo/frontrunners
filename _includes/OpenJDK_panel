@@ -1,0 +1,62 @@
+<style>
+  div.feature-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #E8EBE4;
+  }
+  div.feature {
+    display: flex;
+    max-width: 900px;
+  }
+  div.feature-image {
+    padding: 35px 20px;
+  }
+  div.feature-details {
+    padding: 35px 20px;
+  }
+  div.feature p {
+    color: #28282B;
+    background-color: #E8EBE4;
+  }
+  div.feature h3 {
+    color: #28282B;
+    background-color: #E8EBE4;
+  }
+  div.feature h1 {
+    color: #28282B;
+    background-color: #E8EBE4;
+  }
+  div.feature h2 {
+    color: #28282B;
+    background-color: #E8EBE4;
+  }
+  div.feature-image img {
+    padding: 3px 0px 0px 0px;
+    /* box-shadow: 4px 4px 2px lightgrey; */
+  }	
+</style>
+
+<div class="feature-wrapper">
+  <div id="keynote" class="feature">
+    <div class="feature-image">
+      <img class="speaker-image" src="{{site.url}}/images/speakers/2022/steve_chen.jpg" alt="" width="150"/>
+    </div>
+
+    <div class="feature-details">
+      <h3>
+	Emcee: Steve Chen
+      </h3>
+      <p>
+        Welcome to our host Steve Chen!
+      </p>
+      <p>
+        Our emcee for the day will be Steve Chen. Steve is heavily involved in the DC and New York meetup scenes. He organizes the DC React meetup group.
+        He is also the Community Executive Officer at Code &amp; Coffee, which is a series of community-led events appearing in 21 US cities and growing!
+      </p>
+      <p>
+        Thank you, Steve, for helping us bring back in person events to DC and hosting Frontrunners!
+      </p>
+    </div>
+  </div>
+</div>
