@@ -21,8 +21,15 @@ layout: default
     margin-right: auto;
     width: 50%;
   }
-  div.tickets {
+  div.tickets-wrap {
     padding: 10px 0px;
+  }
+  a.tickets {
+    background:rgba(184,15,10,1);
+    color:white;
+    padding:10px 20px;
+    text-decoration:none;
+    font-weight:bold;
   }
 </style>
 
@@ -46,8 +53,9 @@ layout: default
     <p>
       Frontrunners tickets are now available. Get yours today!
     </p>
-    <div class="tickets">
-      <a class="wx-button" href="https://frontrunners.ticketspice.com/frontrunners-2025" style="background:rgba(150, 0, 24,1);color:lightgrey;padding:10px 20px;text-decoration:none;font-weight:bold;" target="_blank">
+
+    <div class="tickets-wrap">
+      <a class="tickets" href="https://frontrunners.ticketspice.com/frontrunners-2025" target="_blank">
         Register Now!
       </a>
     </div>
@@ -128,7 +136,7 @@ layout: default
   </div>
 </div>
 
+{% include photos_panel.html %}}
 {% include tickets_panel.html %}
-{% include photos_panel.html %}
 {% include headshots_panel.html %}
 {% include sponsors_panel.html %}
