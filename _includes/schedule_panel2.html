@@ -106,14 +106,17 @@
       <div class="schedule-panel-talk"><strong>Kapil Poreddy</strong> &mdash; Room 126 &mdash; <em>Building a Real-Time LLM Classification Pipeline for Under $0.001 Per Request</em></div>
       <div class="schedule-panel-talk-description">
         Everyone's building with LLMs. Almost nobody's talking about what it actually takes to make them reliable, fast, and cheap enough for production, especially when the output has real consequences.
-        I built an open-source system called Food-as-Medicine (FAM) that classifies grocery ingredients against family health profiles and delivers real-time nutritional risk scores and healthier swap suggestions at the point of purchase. The LLM has to decompose ambiguous ingredients like "natural flavors" into canonical risk entities, map them against household health conditions, like pregnancy, diabetes, hypertension, and child safety, and return strictly valid JSON, every time, without hallucinating a single risk flag. A parent trusting a "safe" label on a product containing an allergen is not an acceptable failure mode.
-        In this talk, I'll open up the entire pipeline and walk through the engineering decisions that made this work regarding 
+      </div>
+      <div class="schedule-panel-talk-description">
+        I built an open-source system called Food-as-Medicine (FAM) that classifies grocery ingredients against family health profiles and delivers real-time nutritional risk scores and healthier swap suggestions at the point of purchase.
+        In this talk, I'll open up the entire pipeline of this system and walk through the engineering decisions regarding 
         its prompt architecture, JSON schema enforcement, hybrid classification, the scoring function, cost engineering, and telemetry and feedback loops.
       </div>
       <div class="schedule-panel-talk-description">
-        I'll also discuss 
-        what broke. Umbrella terms that resist classification. E-number versus common name mismatches the model doesn't know without explicit context. JSON that's almost valid but fails schema validation. The failure modes are instructive and generalizable to any LLM pipeline you're building.
-        You'll leave with a production-tested prompt engineering pattern for structured LLM outputs, a hybrid LLM-plus-rules architecture that applies to any classification problem, cost modeling formulas for budgeting LLM API usage at scale, and an open-source codebase to start from."
+        I'll also discuss what broke. The failure modes are instructive and generalizable to any LLM pipeline you're building.
+      </div>
+      <div class="schedule-panel-talk-description">
+        You'll leave with a production-tested prompt engineering pattern for structured LLM outputs, a hybrid LLM-plus-rules architecture that applies to any classification problem, cost modeling formulas for budgeting LLM API usage at scale, and an open-source codebase to start from.
       </div>
 
       <div class="schedule-panel-speaker-bio">
