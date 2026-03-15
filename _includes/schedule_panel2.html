@@ -62,7 +62,7 @@
         Working with LLMs can feel like trying to communicate in a brand new language. Your prompt says one thing, the model infers another, and the output is not what you expected. It can make you question your communication skills or whether AI is all hype. What if the problem lies somewhere in the middle?
       </div>
       <div class="schedule-panel-talk-description">
-        When you write a function, you know what the end result should look like. LLMs introduce variability that can't be resolved by writing the ""perfect prompt."" They don't know your preferences, standards, or what ""good"" means until it is defined explicitly and verified systematically. Without that, it's all guesswork.
+        When you write a function, you know what the end result should look like. LLMs introduce variability that can't be resolved by writing the "perfect prompt." They don't know your preferences, standards, or what "good" means until it is defined explicitly and verified systematically. Without that, it's all guesswork.
       </div>
       <div class="schedule-panel-talk-description">
         Developers know that testing surfaces problems early, yet most guidance focuses on enhancing prompts and maximizing context. In this talk, I'll walk through a practical framework for bringing software testing discipline to working with LLMs: defining what the LLM should do, establishing human-reviewed scoring metrics, and building structured test cases that generate valuable insight rather than just more outputs to scroll through.
@@ -105,19 +105,17 @@
   
       <div class="schedule-panel-talk"><strong>Kapil Poreddy</strong> &mdash; Room 126 &mdash; <em>Building a Real-Time LLM Classification Pipeline for Under $0.001 Per Request</em></div>
       <div class="schedule-panel-talk-description">
-        Everyone's building with LLMs. Almost nobody's talking about what it actually takes to make them reliable, fast, and cheap enough for production â€” especially when the output has real consequences.
-        I built an open-source system called Food-as-Medicine (FAM) that classifies grocery ingredients against family health profiles and delivers real-time nutritional risk scores and healthier swap suggestions at the point of purchase. The LLM has to decompose ambiguous ingredients like ""natural flavors"" into canonical risk entities, map them against household health conditions â€” pregnancy, diabetes, hypertension, child safety â€” and return strictly valid JSON, every time, without hallucinating a single risk flag. A parent trusting a ""safe"" label on a product containing an allergen is not an acceptable failure mode.
-        In this talk, I'll open up the entire pipeline and walk through the engineering decisions that made this work:
-        Prompt architecture. The system prompt, the few-shot chain, and why defining what the model cannot say before what it can say was the single biggest reliability improvement. I'll show the actual prompt template from the repo.
-        JSON schema enforcement. How we went from parsing free-form LLM text with regex (fragile) to constrained output schemas with validation, canonicalization, and a repair-and-retry loop that catches malformed responses before they hit the scoring engine.
-        Hybrid classification. The LLM handles semantic ambiguity. A deterministic rules layer handles known mappings. A post-processing validator drops anything hallucinated outside a curated allow-list. I'll show how the rule-based classifier and the LLM classifier compose â€” and when each one wins.
-        The scoring function. A profile-aware formula that combines NutriScore, risk flags, goal fitness, and budget penalty into a normalized 0â€“100 score with traffic-light risk tiers. I'll walk through the algebra and show how the same product scores differently for a diabetic household versus a pregnant user.
-        Cost engineering. At GPT-4.1 pricing, each classification costs $0.0006â€“$0.0012. A full 50,000-product catalog costs $30â€“$60 to classify once. I'll show the caching strategy â€” deterministic hashing of ingredient strings, request batching, front-end debounce â€” that brings per-session cost to near zero for returning products.
-        Telemetry and feedback loops. Every nudge shown, accepted, or ignored feeds back into prompt optimization and ranking updates. I'll show the closed loop and why telemetry-driven refinement matters more than getting the prompt perfect on day one.
-        What broke. Umbrella terms that resist classification. E-number versus common name mismatches the model doesn't know without explicit context. JSON that's almost valid but fails schema validation. The failure modes are instructive and generalizable to any LLM pipeline you're building.
-        The full system, React + Next.js front end, Python FastAPI backend, and OpenAI API integration, is open source at github.com/learningdebunked/FAM, published at IEEE AMICT 2025, and everything I show in this talk you can fork and run tonight.
+        Everyone's building with LLMs. Almost nobody's talking about what it actually takes to make them reliable, fast, and cheap enough for production, especially when the output has real consequences.
+        I built an open-source system called Food-as-Medicine (FAM) that classifies grocery ingredients against family health profiles and delivers real-time nutritional risk scores and healthier swap suggestions at the point of purchase. The LLM has to decompose ambiguous ingredients like "natural flavors" into canonical risk entities, map them against household health conditions, like pregnancy, diabetes, hypertension, and child safety, and return strictly valid JSON, every time, without hallucinating a single risk flag. A parent trusting a "safe" label on a product containing an allergen is not an acceptable failure mode.
+        In this talk, I'll open up the entire pipeline and walk through the engineering decisions that made this work regarding 
+        its prompt architecture, JSON schema enforcement, hybrid classification, the scoring function, cost engineering, and telemetry and feedback loops.
+      </div>
+      <div class="schedule-panel-talk-description">
+        I'll also discuss 
+        what broke. Umbrella terms that resist classification. E-number versus common name mismatches the model doesn't know without explicit context. JSON that's almost valid but fails schema validation. The failure modes are instructive and generalizable to any LLM pipeline you're building.
         You'll leave with a production-tested prompt engineering pattern for structured LLM outputs, a hybrid LLM-plus-rules architecture that applies to any classification problem, cost modeling formulas for budgeting LLM API usage at scale, and an open-source codebase to start from."
       </div>
+
       <div class="schedule-panel-speaker-bio">
         My work operates at the intersection of large-scale digital infrastructure and population health transformation 
         designing AI-enabled, cloud-native systems that translate intelligence into real-world outcomes at a national scale.
@@ -125,10 +123,10 @@
       <div class="schedule-panel-speaker-bio">
         My areas of focus include:
 
-        High-reliability, cloud-native platforms powering mission-critical retail and healthcare ecosystems
-        Multicloud architecture optimization for resilience, cost efficiency, and continuous availability
-        AI-driven engineering systems from agentic automation to intelligent incident response
-        Retail-integrated digital health and care delivery models that bridge predictive insight with physical fulfillment
+        high-reliability, cloud-native platforms, 
+        multicloud architecture optimization for resilience, cost efficiency, and continuous availability,
+        AI-driven engineering systems from agentic automation to intelligent incident response,
+        and retail-integrated digital health and care delivery models.
       </div>
 
       <div class="schedule-panel-speaker-bio">
